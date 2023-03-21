@@ -6,7 +6,7 @@ class Realisateur
     private string $_prenom;
     private string $_sexe;
     private string $_dateNaissance;
-    private array $_realisateur;
+    private array $_realisateurs;
 
 //Constructeur pour définir un Réalisateur//
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance)
@@ -15,6 +15,7 @@ class Realisateur
         $this->_prenom = $prenom;
         $this->_sexe = $sexe;
         $this->_dateNaissance = $dateNaissance;
+        $this->_realisateurs = [];
     }
 
 //Getter et Setter//
@@ -58,7 +59,7 @@ class Realisateur
 //Méthode pour ajouter un réalisateur à un film
     public function addRealisateur(Film $realisateur)
     {
-        $this->_realisateur[] = $realisateur;
+        $this->_realisateurs[] = $realisateur;
     }
 
 }

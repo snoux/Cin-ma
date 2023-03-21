@@ -10,7 +10,7 @@ $Scorsese = new Realisateur("Scorsese", "Martin", "Homme", "17-11-1942");
 $Bigelow = new Realisateur("Bigelow", "Kathryn", "Femme", "27-11-1951");
 $Tarantino = new Realisateur("Tarantino", "Quentin", "Homme", "27-03-1963");
 $Campbell = new Realisateur("Campbell", "Martin", "Homme", "24-10-1943");
-$Nolan = new Realisateur("Nolas", "Christopher","Homme", "30-07-1970");
+$Nolan = new Realisateur("Nolan", "Christopher","Homme", "30-07-1970");
 $Ritchie = new Realisateur("Ritchie", "Guy", "Homme", "10-09-1968");
 
 
@@ -25,24 +25,31 @@ $TheDarkKnight = new Film("The Dark Knight", "13-08-2008", 152, $Nolan);
 $CasinoRoyale = new Film("Casino Royale", "22-11-2006", 144, $Campbell);
 $SherlockHolmes = new Film("Sherlock Holmes", "03-02-2010", 128, $Ritchie);
 
+//Instanciation des rôles//
+$jamesbond = new Role("James Bond");
+$batman = new Role("Batman");
+$sherlock = new Role("Sherlock Holmes");
+
 //Instanciation des Acteurs//
-$Connery = new Acteur("Connery", "Sean", "Homme", "25-08-1930", "James Bond");
-$Lazenby = new Acteur("Lazenby", "George", "Homme", "05-09-1939", "James Bond");
-$Moore = new Acteur("Moore", "Roger", "Homme", "14-10-1927", "James Bond");
-$Dalton = new Acteur("Dalton", "Timothy", "Homme", "21-03-1946", "James Bond");
-$Brosnan = new Acteur("Brosnan", "Pierce", "Homme", "16-05-1953", "James Bond");
-$Craig = new Acteur("Craig", "Daniel", "Homme", "02-03-1968", "James Bond");
-$West = new Acteur("West", "Adam", "Homme", "19-09-1928", "Batman");
-$Keaton = new Acteur("Keaton", "Michael", "Homme", "05-09-1951", "Batman");
-$Kilmer = new Acteur("Kilmer", "Val", "Homme", "31-12-1959", "Batman");
-$Clooney = new Acteur("Clooney", "George", "Homme", "06-05-1961", "Batman");
-$Bale = new Acteur("Bale", "Christian", "Homme", "30-01-1974", "Batman");
-$Affleck = new Acteur("Affleck", "Ben", "Homme", "15-08-1972", "Batman");
-$Rathbone = new Acteur("Rathbone", "Basil", "Homme", "13-06-1892", "Sherlock Holmes");
-$Cushing = new Acteur("Cushing", "Peter", "Homme", "26-05-1913", "Sherlock Holmes");
-$Brett = new Acteur("Brett", "Jeremy", "Homme", "03-11-1933", "Sherlock Holmes");
-$DowneyJr = new Acteur("Downey Jr.", "Robert", "Homme", "04-04-1965", "Sherlock Holmes");
-$McKellen = new Acteur("McKellen", "Ian", "Homme", "25-05-1939", "Sherlock Holmes");
+$Connery = new Acteur("Connery", "Sean", "Homme", "25-08-1930", $jamesbond);
+$Lazenby = new Acteur("Lazenby", "George", "Homme", "05-09-1939", $jamesbond);
+$Moore = new Acteur("Moore", "Roger", "Homme", "14-10-1927", $jamesbond);
+$Dalton = new Acteur("Dalton", "Timothy", "Homme", "21-03-1946", $jamesbond);
+$Brosnan = new Acteur("Brosnan", "Pierce", "Homme", "16-05-1953", $jamesbond);
+$Craig = new Acteur("Craig", "Daniel", "Homme", "02-03-1968", $jamesbond);
+$West = new Acteur("West", "Adam", "Homme", "19-09-1928", $batman);
+$Keaton = new Acteur("Keaton", "Michael", "Homme", "05-09-1951", $batman);
+$Kilmer = new Acteur("Kilmer", "Val", "Homme", "31-12-1959", $batman);
+$Clooney = new Acteur("Clooney", "George", "Homme", "06-05-1961", $batman);
+$Bale = new Acteur("Bale", "Christian", "Homme", "30-01-1974", $batman);
+$Affleck = new Acteur("Affleck", "Ben", "Homme", "15-08-1972", $batman);
+$Rathbone = new Acteur("Rathbone", "Basil", "Homme", "13-06-1892", $sherlock);
+$Cushing = new Acteur("Cushing", "Peter", "Homme", "26-05-1913", $sherlock);
+$Brett = new Acteur("Brett", "Jeremy", "Homme", "03-11-1933", $sherlock);
+$DowneyJr = new Acteur("Downey Jr.", "Robert", "Homme", "04-04-1965", $sherlock);
+$McKellen = new Acteur("McKellen", "Ian", "Homme", "25-05-1939", $sherlock);
 
 //Affichage//
 
+// echo $batman->ActeurRole();
+echo $West->getRole();
