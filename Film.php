@@ -3,17 +3,18 @@
 class Film
 {
     private string $_titre;
-    private string $_date;
+    private string $_dateSortie;
     private int $_duree;
-    private string $_realisateur;
+    private Realisateur $_realisateur;
 
 //Constructeur pour définir un Film//
-    public function __construct(string $titre, string $date, int $duree, string $realisateur)
+    public function __construct(string $titre, string $dateSortie, int $duree, Realisateur $realisateur)
     {
         $this->_titre = $titre;
-        $this->_date = $date;
+        $this->_dateSortie = $dateSortie;
         $this->_duree = $duree;
         $this->_realisateur = $realisateur;
+        $this->_realisateur->addRealisateur($this);
     }
 
 //Getter et Setter//
@@ -26,13 +27,13 @@ class Film
         $this->_titre = $titre;
     }
 
-    public function getDate(): string
+    public function getDateSortie(): string
     {
-        return $this->_date;
+        return $this->_dateSortie;
     }
-    public function setDate(string $date)
+    public function setDateSortie(string $dateSortie)
     {
-        $this->_date = $date;
+        $this->_dateSortie = $dateSortie;
     }
 
     public function getDuree(): int
@@ -46,9 +47,9 @@ class Film
 
     public function getRealisateur(): string
     {
-        return $this->_realisateur;
+        return $this->_realisateur->getPrenom() . " " . $this->_realisateur->getNom();
     }
-    public function setRealisateur(string $realisateur)
+    public function setRealisateur(Realisateur $realisateur)
     {
         $this->_realisateur = $realisateur;
     }
