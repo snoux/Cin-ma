@@ -74,3 +74,4 @@ echo $batman->ActeursRole();
 echo $TheDarkKnight->ListerCasting();
 echo $test->FilmsGenre();
 echo $West->FilmographieActeur();
+echo $Tarantino->FilmographieRealisateur();

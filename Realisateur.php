@@ -19,6 +19,17 @@ class Realisateur extends Personne
         $this->_films[] = $film;
     }
 
+//Méthode pour afficher la filmographie d'un réalisateur//
+public function FilmographieRealisateur()
+{
+    $result = "<p>************************</p>";
+    $result .= "<p>". $this->getNom() . " " . $this->getPrenom() . " a réalisé :</p>";
+    foreach($this->_films as $film)
+    {
+        $result .= $film->getTitre() . "<br>";
+    }
+    return $result;
+}
 }
 
 ?>
