@@ -12,7 +12,7 @@ $Tarantino = new Realisateur("Tarantino", "Quentin", "Homme", "27-03-1963");
 $Campbell = new Realisateur("Campbell", "Martin", "Homme", "24-10-1943");
 $Nolan = new Realisateur("Nolan", "Christopher","Homme", "30-07-1970");
 $Ritchie = new Realisateur("Ritchie", "Guy", "Homme", "10-09-1968");
-
+$Dozzier = new Realisateur("William", "Dozzier", "Homme", "13-02-1908");
 
 //Instanciation des Genres//
 $action = new Genre("Action");
@@ -36,6 +36,7 @@ $InglouriousBasterds = new Film("Inglourious Basterds", "19-08-2009", 159, $Tara
 $TheDarkKnight = new Film("The Dark Knight", "13-08-2008", 152, $Nolan, "Synopsis", $test);
 $CasinoRoyale = new Film("Casino Royale", "22-11-2006", 144, $Campbell, "Synopsis", $test);
 $SherlockHolmes = new Film("Sherlock Holmes", "03-02-2010", 128, $Ritchie, "Synopsis", $test);
+$BatmanSerie = new Film("Batman", "29-04-1967", 25, $Dozzier, "Synopsis", $test);
 
 //Instanciation des rôles//
 $jamesbond = new Role("James Bond");
@@ -65,6 +66,8 @@ $McKellen = new Acteur("McKellen", "Ian", "Homme", "25-05-1939", $sherlock);
 
 //Instanciation des Castings
 $castingTheDarkKnightBatmanBale = new Casting($TheDarkKnight, $batman, $Bale);
+$castingBatmanSerieBatmanWest = new Casting($BatmanSerie, $batman, $West);
 $castingTheDarkKnightJoker = new Casting($TheDarkKnight, $joker, $Ledger);
 
 //Affichage//
+echo $batman->ActeursRole();

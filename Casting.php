@@ -18,14 +18,16 @@ class Casting
     }
 
 //Getter et Setter
-    // public function getCasting(): string
-    // {
-    //     return $this->_film->;
-    // }
-    // public function setCasting(string $casting)
-    // {
-    //     $this->_casting = $casting;
-    // }
-
-
+    public function getFilm(): string
+    {
+        return $this->_film->getTitre();
+    }
+    public function getRole(): string
+    {
+        return $this->_role->getRole();
+    }
+    public function getActeur(): string
+    {
+        return $this->_acteur->getNom() . " " . $this->_acteur->getPrenom();
+    }
 }

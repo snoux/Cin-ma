@@ -76,6 +76,7 @@ public function addCasting(Casting $casting)
     $this->_castings[] = $casting;
 } 
 
+
 }
 
 ?>
