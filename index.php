@@ -73,3 +73,4 @@ $castingTheDarkKnightJoker = new Casting($TheDarkKnight, $joker, $Ledger);
 echo $batman->ActeursRole();
 echo $TheDarkKnight->ListerCasting();
 echo $test->FilmsGenre();
+echo $West->FilmographieActeur();
