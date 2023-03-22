@@ -1,65 +1,22 @@
 <?php
 
-class Realisateur
+class Realisateur extends Personne
 {
-    private string $_nom;
-    private string $_prenom;
-    private string $_sexe;
-    private string $_dateNaissance;
-    private array $_realisateurs;
+    private array $_films;
 
 //Constructeur pour définir un Réalisateur//
     public function __construct(string $nom, string $prenom, string $sexe, string $dateNaissance)
     {
-        $this->_nom = $nom;
-        $this->_prenom = $prenom;
-        $this->_sexe = $sexe;
-        $this->_dateNaissance = $dateNaissance;
-        $this->_realisateurs = [];
+        parent::__construct($nom, $prenom, $sexe, $dateNaissance);
+        $this->_films = [];
     }
 
-//Getter et Setter//
-    public function getNom(): string
-    {
-        return $this->_nom;
-    }
-    public function setNom(string $nom)
-    {
-        $this->_nom = $nom;
-    }
-
-    public function getPrenom(): string
-    {
-        return $this->_prenom;
-    }
-    public function setPrenom(string $prenom)
-    {
-        $this->_prenom = $prenom;
-    }
-
-    public function getSexe(): string
-    {
-        return $this->_sexe;
-    }
-    public function setSexe(string $sexe)
-    {
-        $this->_sexe = $sexe;
-    }
-
-    public function getDateNaissance(): string
-    {
-        return $this->_dateNaissance;
-    }
-    public function setDateNaissance(string $dateNaissance)
-    {
-        $this->_dateNaissance = $dateNaissance;
-    }
 
 ///////////////////////////////////////////////////////////
-//Méthode pour ajouter un réalisateur à un film
-    public function addRealisateur(Film $realisateur)
+//Méthode pour ajouter un film à un réalisateur
+    public function addFilm(Film $film)
     {
-        $this->_realisateurs[] = $realisateur;
+        $this->_films[] = $film;
     }
 
 }
