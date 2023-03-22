@@ -27,4 +27,17 @@ class Genre
     {
         $this->_films[] = $film;
     }
+
+//Méthode pour afficher les films par genre
+    public function FilmsGenre()
+    {
+        $result = "<p>************************</p>";
+        $result .= "<p> Le genre " . $this->_nomGenre . " est associé à :</p>";
+        foreach($this->_films as $films)
+        {
+            $result .= $films->getTitre() . "<br>";
+        }
+        return $result;
+    }
+
 }

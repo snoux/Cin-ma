@@ -20,4 +20,5 @@ class Acteur extends Personne
     {
         $this->_castings[] = $casting;
     }
+    
 }

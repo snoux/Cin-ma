@@ -76,7 +76,17 @@ public function addCasting(Casting $casting)
     $this->_castings[] = $casting;
 } 
 
-
+//Méthode pour lister un casting//
+public function ListerCasting()
+{
+    $result = "<p>************************</p>";
+    $result .= "<p>Dans le film " . $this->_titre . " :</p>";
+    foreach($this->_castings as $casting)
+    {
+        $result .= $casting->getRole() . " a été incarné par " . $casting->getActeur() . "<br>";
+    }
+    return $result;
+}    
 }
 
 ?>

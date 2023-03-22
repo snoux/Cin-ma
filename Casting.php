@@ -30,4 +30,5 @@ class Casting
     {
         return $this->_acteur->getNom() . " " . $this->_acteur->getPrenom();
     }
+
 }

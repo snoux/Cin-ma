@@ -24,7 +24,7 @@ $fantastique = new Genre("Fantastique");
 $horreur = new genre("Horreur");
 $scienceFiction = new genre("Science Fiction");
 $thriller = new genre("Thriller");
-$test = new genre("Genre test");
+$test = new genre("test");
 
 //Instanciation des Films//
 $TheBigLebowski = new Film("The Big Lebowski", "22-04-1998", 117, $Coen, "Synopsis", $test);
@@ -71,3 +71,5 @@ $castingTheDarkKnightJoker = new Casting($TheDarkKnight, $joker, $Ledger);
 
 //Affichage//
 echo $batman->ActeursRole();
+echo $TheDarkKnight->ListerCasting();
+echo $test->FilmsGenre();

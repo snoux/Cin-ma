@@ -33,7 +33,8 @@ class Role
     //Methode pour afficher les acteurs ayant incarné un rôle précis
     public function ActeursRole()
     {
-        $result = "La liste des acteurs ayant incarné le rôle de " . $this->_role . " : <br>";
+        $result = "<p>************************</p>";
+        $result .= "<p>La liste des acteurs ayant incarné le rôle de " . $this->_role . "</p>";
         foreach($this->_castings as $casting)
         {
             $result .= $casting->getActeur() . "<br>";
